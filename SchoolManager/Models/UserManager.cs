@@ -17,5 +17,6 @@ namespace SchoolManager.Models
         public int ID { get; set; }
         public string Account { get; set; }
         public string Password { get; set; }
+        public Nullable<System.DateTime> DateLogin { get; set; }
     }
 }

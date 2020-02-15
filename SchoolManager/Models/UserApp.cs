@@ -22,5 +22,11 @@ namespace SchoolManager.Models
         public string Email { get; set; }
         public string Phone { get; set; }
         public string Position { get; set; }
+        public string Description { get; set; }
+        public Nullable<System.DateTime> CreateDate { get; set; }
+        public Nullable<System.DateTime> UpdateDate { get; set; }
+        public Nullable<System.DateTime> CreateBy { get; set; }
+        public Nullable<System.DateTime> UpdateBy { get; set; }
+        public Nullable<int> Status { get; set; }
     }
 }
