@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,6 +52,9 @@
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
@@ -122,70 +125,67 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ClassController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Building.cs">
-      <DependentUpon>SchoolManager.tt</DependentUpon>
+      <DependentUpon>SchoolManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Class.cs">
-      <DependentUpon>SchoolManager.tt</DependentUpon>
+      <DependentUpon>SchoolManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Classroom.cs">
-      <DependentUpon>SchoolManager.tt</DependentUpon>
+      <DependentUpon>SchoolManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Faculty.cs">
-      <DependentUpon>SchoolManager.tt</DependentUpon>
+      <DependentUpon>SchoolManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Lecturer.cs">
-      <DependentUpon>SchoolManager.tt</DependentUpon>
+      <DependentUpon>SchoolManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Resources.cs">
-      <DependentUpon>SchoolManager.tt</DependentUpon>
+    <Compile Include="Models\Resource.cs">
+      <DependentUpon>SchoolManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ResourcesManagement.cs">
-      <DependentUpon>SchoolManager.tt</DependentUpon>
+      <DependentUpon>SchoolManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RoomManagement.cs">
-      <DependentUpon>SchoolManager.tt</DependentUpon>
+      <DependentUpon>SchoolManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SchoolManager.Context.cs">
+    <Compile Include="Models\SchoolManagement.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SchoolManager.Context.tt</DependentUpon>
+      <DependentUpon>SchoolManagement.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SchoolManager.cs">
+    <Compile Include="Models\SchoolManagement.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SchoolManager.tt</DependentUpon>
+      <DependentUpon>SchoolManagement.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SchoolManager.Designer.cs">
+    <Compile Include="Models\SchoolManagement.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SchoolManager.edmx</DependentUpon>
+      <DependentUpon>SchoolManagement.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Subjects.cs">
-      <DependentUpon>SchoolManager.tt</DependentUpon>
+    <Compile Include="Models\Subject.cs">
+      <DependentUpon>SchoolManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TimeManagement.cs">
-      <DependentUpon>SchoolManager.tt</DependentUpon>
+      <DependentUpon>SchoolManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UserApp.cs">
-      <DependentUpon>SchoolManager.tt</DependentUpon>
+      <DependentUpon>SchoolManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UserManager.cs">
-      <DependentUpon>SchoolManager.tt</DependentUpon>
+      <DependentUpon>SchoolManagement.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModels\ClassJoin.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap-theme.css" />
@@ -1692,6 +1692,7 @@
     <Content Include="Content\plugins\select2\js\select2.js" />
     <Content Include="Content\plugins\select2\js\select2.min.js" />
     <Content Include="Content\plugins\sparklines\sparkline.js" />
+    <Content Include="Content\plugins\StyleSheet1.css" />
     <Content Include="Content\plugins\summernote\lang\summernote-ar-AR.js" />
     <Content Include="Content\plugins\summernote\lang\summernote-ar-AR.min.js" />
     <Content Include="Content\plugins\summernote\lang\summernote-bg-BG.js" />
@@ -1806,15 +1807,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\SchoolManager.Context.tt">
+    <Content Include="Models\SchoolManagement.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SchoolManager.edmx</DependentUpon>
-      <LastGenOutput>SchoolManager.Context.cs</LastGenOutput>
+      <DependentUpon>SchoolManagement.edmx</DependentUpon>
+      <LastGenOutput>SchoolManagement.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\SchoolManager.tt">
+    <Content Include="Models\SchoolManagement.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SchoolManager.edmx</DependentUpon>
-      <LastGenOutput>SchoolManager.cs</LastGenOutput>
+      <DependentUpon>SchoolManagement.edmx</DependentUpon>
+      <LastGenOutput>SchoolManagement.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -1896,14 +1897,15 @@
     <Content Include="Content\plugins\summernote\summernote.js.map" />
     <Content Include="Content\plugins\sweetalert2-theme-bootstrap-4\bootstrap-4.scss" />
     <Content Include="Content\plugins\toastr\toastr.js.map" />
-    <EntityDeploy Include="Models\SchoolManager.edmx">
+    <EntityDeploy Include="Models\SchoolManagement.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SchoolManager.Designer.cs</LastGenOutput>
+      <LastGenOutput>SchoolManagement.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\SchoolManager.edmx.diagram">
-      <DependentUpon>SchoolManager.edmx</DependentUpon>
+    <Content Include="Models\SchoolManagement.edmx.diagram">
+      <DependentUpon>SchoolManagement.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\Class.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -1928,6 +1930,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Class\Index.cshtml" />
+    <Content Include="Views\Class\ListClass.cshtml" />
+    <Content Include="Views\Class\FormCreateEdit.cshtml" />
+    <Content Include="Views\Class\InfoDetail.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

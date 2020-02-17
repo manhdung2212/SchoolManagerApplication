@@ -1,0 +1,52 @@
+﻿
+<div class="add-or-edit">
+    <h2 class="modal-title">Thêm mới lớp</h2>
+    <div class="row">
+
+
+
+        <div class="col-md-3">
+            <label>Mã lớp</label>
+            <input type="text" value="" name="code" class="form-control" />
+            <div class="error"></div>
+        </div>
+        <div class="col-md-3">
+            <label>Tên lớp</label>
+            <input type="text" value="" name="name" class="form-control" />
+            <div class="error"></div>
+        </div>
+        <div class="col-md-3">
+            <label>Mã môn học</label>
+            <select id="subjectid" class="form-control" value="1">
+                @foreach (var item in ViewBag.listSubject as IEnumerable<SchoolManager.Models.Subject>)
+                {
+                    <option value="@item.ID">@item.Name</option>
+                }
+                <option value="1">123</option>
+            </select>
+            <div class="error"></div>
+        </div>
+        <div class="col-md-3">
+            <label>Mã giảng viên</label>
+            <select id="lecturerid" class="form-control" value="1">
+                @foreach (var item in ViewBag.listLecturer as IEnumerable<SchoolManager.Models.Lecturer>)
+                {
+                    <option value="@item.ID">@item.Name</option>
+                }
+                <option value="1">123</option>
+            </select>
+            <div class="error"></div>
+        </div>
+        <div class="col-md-3">
+            <label>Ghi chú</label>
+            <textarea id="node" value="" class="form-control"></textarea>
+            <div class="error"></div>
+        </div>
+        
+    </div>
+    <br />
+    <button class="btn btn-danger btn-createEdit">Thêm</button>
+    <button class="btn-update btn btn-primary">Cập nhật</button>
+</div>
+
+
