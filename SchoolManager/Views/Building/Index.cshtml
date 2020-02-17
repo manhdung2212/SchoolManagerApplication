@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+
+</div>
+<div class="main container">
+    <h2>Tìm kiếm</h2>
+    <br />
+    <div class="row">
+        <div class="col-md-3">
+            <input type="text" name="searchname" value="" placeholder="Nhập Từ khóa" class="form-control" />
+        </div>
+    </div>
+    <br />
+
+    <div class="list-building">
+
+    </div>
+    
+    <div class="form-add-edit">
+        @Html.Action("FormCreateEdit", "Building")
+    </div>
+</div>
+
