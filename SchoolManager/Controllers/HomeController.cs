@@ -10,6 +10,11 @@ namespace SchoolManager.Controllers
     {
         public ActionResult Index()
         {
+            var userName = "adc"; 
+            //if( userName == null)
+            //{
+            //    return RedirectToAction("Login", "UserApp"); 
+            //}
             return View();
         }
 

@@ -1,0 +1,50 @@
+﻿@model IEnumerable< SchoolManager.ViewModels.UserViewModel>
+
+<div>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th> Tên người dùng </th>
+                <th> Tài khoản </th>
+                <th> Email </th>
+                <th> Số điện thoại </th>
+                <th> Ngày đăng nhập </th>
+                <th>  </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+
+                <td> @item.Name  </td>
+                <td> @item.Account</td>
+                <td> @item.Email</td>
+                <td> @item.Phone</td>
+                <td> @item.DateLogin</td>
+                <td>
+                    <button class="btn btn-delete"> <i class="far fa-trash-alt text-danger"></i> </button>
+                </td>
+            </tr>
+
+            }
+        </tbody>
+    </table>
+
+    <div class="pagination">
+        @for (int i = 1; i <= ViewBag.pageCount; i++)
+        {
+            if (i == ViewBag.pageNumber)
+            {
+                <button data-page="@i" class="active">  @i  </button>
+
+            }
+            else
+            {
+                <button data-page="@i">  @i  </button>
+            }
+        }
+    </div>
+</div>
+
