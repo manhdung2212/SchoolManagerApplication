@@ -1932,6 +1932,7 @@
     <Content Include="Views\Subject\FormCreateEdit.cshtml" />
     <Content Include="Views\Subject\Detail.cshtml" />
     <Content Include="Views\Subject\DetailInfo.cshtml" />
+    <Content Include="Views\Subject\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

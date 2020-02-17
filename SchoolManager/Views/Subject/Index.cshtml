@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div class="container">
+
+        <h1>  Quản lý môn học </h1>
+        <br />
+        <div class="col-4">
+            <input type="text" name="searchname" value="" class="form-control" placeholder="Tên môn học..."/>
+        </div>
+        <hr />
+        <br />
+        <div class="list-subject">
+
+        </div>
+
+        <div class="create-or-edit">
+            @Html.Action("FormCreateEdit", "Subject")
+        </div>
+
+
+    </div>
+
+
