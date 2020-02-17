@@ -26,11 +26,18 @@ namespace SchoolManager.Controllers
                 data = data.Where(x => x.Name.Contains(search)).OrderBy(x=>x.Name);
                 
             }
+            
             var pageCount = data.Count() % pageSize == 0 ? data.Count() / pageSize : data.Count() / pageSize + 1;
-            var model = data.OrderBy(x => x.Name).Skip(pageSize * pageNumber - pageSize).Take(pageSize).ToList();
             ViewBag.pageCount = pageCount;
-            ViewBag.pageNumber = pageNumber;
-            return PartialView(model);
+            if ( pageCount >= pageNumber)
+            {
+                var model = data.OrderBy(x => x.Name).Skip(pageSize * pageNumber - pageSize).Take(pageSize).ToList();
+                ViewBag.pageNumber = pageNumber;
+                return PartialView(model);
+            }
+            
+            ViewBag.pageNumber = 1;
+            return PartialView(data.OrderBy( x => x.Name).ToList());
 
 
         }
@@ -75,7 +82,7 @@ namespace SchoolManager.Controllers
         public JsonResult Delete(int id)
         {
             var cl = db.Buildings.Find(id);
-            db.Buildings.Remove(cl);
+            db.Buildings.Remove(cl); 
             db.SaveChanges();
             return Json(true);
         }

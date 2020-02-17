@@ -182,6 +182,7 @@ DeleteBuilding();
 function Pagination() {
     $('.pagination button').click(function () {
         pageNumber = $(this).attr('data-page');
+        GetListBuilding(); 
     })
 }
 
@@ -206,9 +207,4 @@ function Check(node, name) {
         return false;
     }
     return true;
-}
-
-function Back() { 
-    $('.btn-back').click(function () {
-    })
 }
