@@ -13,8 +13,8 @@ function EditClick() {
  
         $('.add-or-edit input[name="name"]').val(name);
         $('.add-or-edit input[name="code"]').val(code);
-        $('.add-or-edit #subjectID').val(subjectid);
-        $('.add-or-edit #lecturerID').val(lecturerid);
+        $('.add-or-edit #subjectid').val(subjectid);
+        $('.add-or-edit #lecturerid').val(lecturerid);
         $('.add-or-edit #node').val(node);
 
      
@@ -126,8 +126,8 @@ function Update() {
 
         var name = $('.add-or-edit input[name="name"]').val();
         var code = $('.add-or-edit input[name="code"]').val();
-        var subjectid = $('.add-or-edit #subjectID').val();
-        var lecturerid = $('.add-or-edit #lecturerID').val();
+        var subjectid = $('.add-or-edit #subjectid').val();
+        var lecturerid = $('.add-or-edit #lecturerid').val();
         var node = $('.add-or-edit #node').val();
 
         $.ajax({
