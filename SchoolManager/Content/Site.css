@@ -22,3 +22,27 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+/*.get-data .table button {
+    background: transparent;
+    border: none;
+    margin: 0 0 0 8px;
+    border-radius: 2px;
+}*/
+
+.patination button {
+    background: #ffff;
+    border: 1px solid #bababa;
+    padding: 4px 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 1px;
+    margin: 0 8px 0 0;
+}
+
+  .patination button:hover,.patination button.active {
+        background: #0069bc;
+        border: 1px solid #0069bc;
+        color: #fff;
+    }
+  

@@ -13,10 +13,10 @@ namespace SchoolManager.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class SchoolManagementEntities2 : DbContext
+    public partial class SchoolManagementEntities : DbContext
     {
-        public SchoolManagementEntities2()
-            : base("name=SchoolManagementEntities2")
+        public SchoolManagementEntities()
+            : base("name=SchoolManagementEntities")
         {
         }
     

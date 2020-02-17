@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="jumbotron">
+    <h2>Quản lí Khoa</h2>
+</div>
+
+<div class="main container">
+    <h2>Danh sách Khoa</h2>
+    <br />
+    <div class="row">
+        <input type="text" name="searchName" value="" class="form-control col-md-3" placeholder="nhap ten..."  />
+    </div>
+    <br />
+    <div class="list-faculty">
+      
+    </div>
+    <div class="create-or-edit">
+        @Html.Action("FormCreateEdit","FacultyManager")
+    </div>
+   
+    </div>

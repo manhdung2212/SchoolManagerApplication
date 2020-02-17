@@ -128,60 +128,61 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\FacultyManagerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Building.cs">
-      <DependentUpon>SchoolManagerment.tt</DependentUpon>
+      <DependentUpon>SchoolManager.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Class.cs">
-      <DependentUpon>SchoolManagerment.tt</DependentUpon>
+      <DependentUpon>SchoolManager.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Classroom.cs">
-      <DependentUpon>SchoolManagerment.tt</DependentUpon>
+      <DependentUpon>SchoolManager.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Faculty.cs">
-      <DependentUpon>SchoolManagerment.tt</DependentUpon>
+      <DependentUpon>SchoolManager.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Lecturer.cs">
-      <DependentUpon>SchoolManagerment.tt</DependentUpon>
+      <DependentUpon>SchoolManager.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Resource.cs">
-      <DependentUpon>SchoolManagerment.tt</DependentUpon>
+      <DependentUpon>SchoolManager.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\ResourcesManagement.cs">
-      <DependentUpon>SchoolManagerment.tt</DependentUpon>
+      <DependentUpon>SchoolManager.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RoomManagement.cs">
-      <DependentUpon>SchoolManagerment.tt</DependentUpon>
+      <DependentUpon>SchoolManager.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SchoolManagerment.Context.cs">
+    <Compile Include="Models\SchoolManager.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SchoolManagerment.Context.tt</DependentUpon>
+      <DependentUpon>SchoolManager.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SchoolManagerment.cs">
+    <Compile Include="Models\SchoolManager.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SchoolManagerment.tt</DependentUpon>
+      <DependentUpon>SchoolManager.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\SchoolManagerment.Designer.cs">
+    <Compile Include="Models\SchoolManager.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>SchoolManagerment.edmx</DependentUpon>
+      <DependentUpon>SchoolManager.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Subject.cs">
-      <DependentUpon>SchoolManagerment.tt</DependentUpon>
+      <DependentUpon>SchoolManager.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\TimeManagement.cs">
-      <DependentUpon>SchoolManagerment.tt</DependentUpon>
+      <DependentUpon>SchoolManager.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UserApp.cs">
-      <DependentUpon>SchoolManagerment.tt</DependentUpon>
+      <DependentUpon>SchoolManager.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\UserManager.cs">
-      <DependentUpon>SchoolManagerment.tt</DependentUpon>
+      <DependentUpon>SchoolManager.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1804,15 +1805,15 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\SchoolManagerment.Context.tt">
+    <Content Include="Models\SchoolManager.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SchoolManagerment.edmx</DependentUpon>
-      <LastGenOutput>SchoolManagerment.Context.cs</LastGenOutput>
+      <DependentUpon>SchoolManager.edmx</DependentUpon>
+      <LastGenOutput>SchoolManager.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\SchoolManagerment.tt">
+    <Content Include="Models\SchoolManager.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>SchoolManagerment.edmx</DependentUpon>
-      <LastGenOutput>SchoolManagerment.cs</LastGenOutput>
+      <DependentUpon>SchoolManager.edmx</DependentUpon>
+      <LastGenOutput>SchoolManager.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -1894,14 +1895,15 @@
     <Content Include="Content\plugins\summernote\summernote.js.map" />
     <Content Include="Content\plugins\sweetalert2-theme-bootstrap-4\bootstrap-4.scss" />
     <Content Include="Content\plugins\toastr\toastr.js.map" />
-    <EntityDeploy Include="Models\SchoolManagerment.edmx">
+    <EntityDeploy Include="Models\SchoolManager.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>SchoolManagerment.Designer.cs</LastGenOutput>
+      <LastGenOutput>SchoolManager.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\SchoolManagerment.edmx.diagram">
-      <DependentUpon>SchoolManagerment.edmx</DependentUpon>
+    <Content Include="Models\SchoolManager.edmx.diagram">
+      <DependentUpon>SchoolManager.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\Faculty.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
     <Content Include="Scripts\jquery-3.4.1.slim.js" />
@@ -1926,6 +1928,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\FacultyManager\ListFaculty.cshtml" />
+    <Content Include="Views\FacultyManager\Index.cshtml" />
+    <Content Include="Views\FacultyManager\FormCreateEdit.cshtml" />
+    <Content Include="Views\FacultyManager\ChitietKhoa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

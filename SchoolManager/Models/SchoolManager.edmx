@@ -176,8 +176,8 @@
           <Property Name="Description" Type="nvarchar" MaxLength="2000" />
           <Property Name="CreateDate" Type="datetime" />
           <Property Name="UpdateDate" Type="datetime" />
-          <Property Name="CreateBy" Type="datetime" />
-          <Property Name="UpdateBy" Type="datetime" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="200" />
+          <Property Name="UpdateBy" Type="nvarchar" MaxLength="200" />
           <Property Name="Status" Type="int" />
         </EntityType>
         <EntityType Name="UserManager">
@@ -379,8 +379,8 @@
           <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
           <Property Name="CreateDate" Type="DateTime" Precision="3" />
           <Property Name="UpdateDate" Type="DateTime" Precision="3" />
-          <Property Name="CreateBy" Type="DateTime" Precision="3" />
-          <Property Name="UpdateBy" Type="DateTime" Precision="3" />
+          <Property Name="CreateBy" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="UpdateBy" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
           <Property Name="Status" Type="Int32" />
         </EntityType>
         <EntityType Name="UserManager">
@@ -392,7 +392,7 @@
           <Property Name="Password" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
           <Property Name="DateLogin" Type="DateTime" Precision="3" />
         </EntityType>
-        <EntityContainer Name="SchoolManagementEntities2" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="SchoolManagementEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Buildings" EntityType="Self.Building" />
           <EntitySet Name="Classes" EntityType="Self.Class" />
           <EntitySet Name="Classrooms" EntityType="Self.Classroom" />
@@ -411,7 +411,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="SchoolManagementModelStoreContainer" CdmEntityContainer="SchoolManagementEntities2">
+        <EntityContainerMapping StorageEntityContainer="SchoolManagementModelStoreContainer" CdmEntityContainer="SchoolManagementEntities">
           <EntitySetMapping Name="Buildings">
             <EntityTypeMapping TypeName="SchoolManagementModel.Building">
               <MappingFragment StoreEntitySet="Building">
