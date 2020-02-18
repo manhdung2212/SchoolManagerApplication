@@ -1,0 +1,62 @@
+﻿@model IEnumerable<SchoolManager.ViewModel.ViewModelLecturer>
+
+@{
+    ViewBag.Title = "ListLecture";
+}
+
+<h2>DANH SÁCH CÁC GIẢNG VIÊN</h2>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Họ và tên</th>
+                <th>Giới tính</th>
+                <th>Ngày sinh</th>
+                <th>Địa chỉ</th>
+                <th>Số điện thoại</th>
+                <th>Email</th>
+                <th>Lựa chọn khác</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.name</td>
+
+                @if(item.Gender == true)
+                {
+                    <td>Nam</td>
+                }
+                else
+                {
+                    <td>Nữ</td>
+                }
+
+                <td>@item.Birthday</td>
+                <td>@item.address</td>
+                <td>@item.phone</td>
+                <td>@item.email</td>
+                <td>
+                    <button class="btn-fix" data-id="@item.ID" data-name="@item.name" data-gender="@item.Gender" data-birthday="@item.Birthday.Value.ToString("yyyy-MM-dd")" data-address="@item.address" data-phone="@item.phone" data-email="@item.email" data-facultyid="@item.facultyID" data-node="@item.node" title="Sửa đổi thông tin sinh viên"><i class="fas fa-edit"></i></button>
+                    <button class="btn-delete" data-id="@item.ID" title="Xóa sinh viên"><i class="fas fa-trash"></i></button>
+                    <a class="btn btn-primary" href="/QuanLyGiangVien/Details/@item.ID" title="Thông tin chi tiết sinh viên"><i class="fas fa-info-circle"></i></a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <div class="countpage">
+        @for (int i = 1; i <= ViewBag.pageCount; i++)
+        {
+            if (i == ViewBag.pageNumber)
+            {
+                <button class="active" data-page="@i">@i</button>
+            }
+            else
+            {
+                <button data-page="@i">@i</button>
+            }
+        }
+    </div>
+</div>

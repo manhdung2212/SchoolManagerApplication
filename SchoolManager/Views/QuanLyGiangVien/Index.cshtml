@@ -1,0 +1,25 @@
+﻿@model IEnumerable<SchoolManager.Models.Lecturer>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2></h2>
+<div class="main">
+    <input type="text" name="searchName" placeholder="Nhập tên giảng viên cần tìm kiếm" class="form-control" />
+    Lọc theo khoa:
+    <select class="subjectID">
+        <option>Chọn khoa cần lọc</option>
+        @foreach (var item in ViewBag.ListFaculty as IEnumerable<SchoolManager.Models.Faculty>)
+        {
+            <option value="@item.ID">@item.Name</option>
+        }
+    </select>
+    <div class="list-lecture">
+
+    </div>
+    <div class="form-addoredit">
+        @Html.Action("FormCreateAndEdit", "QuanLyGiangVien")
+    </div>
+</div>
+
